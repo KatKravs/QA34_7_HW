@@ -67,6 +67,51 @@ public class HWFindUniqueElementTest {
 
     }
 
+    @Test
+    public void findElementByXpath() {
+        // tag name = //tag
+        // driver.findElement(By.tagName("h1"));
+
+        driver.findElement(By.xpath("//strong"));
+        driver.findElement(By.xpath("//ul"));
+        driver.findElement(By.xpath("//h2"));
+//
+
+        driver.findElement(By.xpath("//*[@id='dialog-notifications-success']"));
+        driver.findElement(By.xpath("//*[@id='dialog-notifications-error']"));
+
+//
+        driver.findElement(By.xpath("//*[@class='master-wrapper-content']"));
+        driver.findElement(By.xpath("//*[@class='header-logo']"));
+        driver.findElement(By.xpath("//*[@class='header-selectors-wrapper']"));
+//
+        driver.findElement(By.xpath("//*[contains(@href, 'addresses')]"));
+//        //start->//*[starts-with(@attr, '....')
+
+        driver.findElement(By.xpath("//*[starts-with(@href, '/camera')]"));
+        driver.findElement(By.xpath("//*[substring(@href, string-length(@href) - string-length('photo') +1) = 'photo']"));
+
+
+
+//
+//
+//        //text
+//        driver.findElement(By.xpath("//*[starts-with(@href, '/let')]"));
+//        driver.findElement(By.xpath("//span[text()=' Never mistaken for anything else ']"));
+//        driver.findElement(By.xpath("//span[.=' Never mistaken for anything else ']"));
+//        driver.findElement(By.xpath("//span[contains(.,'mistake')]"));
+//
+//        //search of parent element - //input[@id='username']/..
+//        // //div/a - child - css=div>a
+//        // //div//a -any lebel child - css = div a
+//
+//        //tag1[.tag2[@attr='value']]
+//        //*[@id='firstName' or @name='lastName']
+//        //*[@id='firstName' and @name='lastName']
+
+    }
+
+
 
     @AfterTest
     public void tearDown() {
