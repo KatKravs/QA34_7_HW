@@ -37,8 +37,39 @@ public class HWFindUniqueElementTest {
 
     }
 
+    @Test
+    public void findElementByCssSelector() {
+        //tag name = tag name
+
+        driver.findElement(By.cssSelector("strong"));
+        driver.findElement(By.cssSelector("ul"));
+        driver.findElement(By.cssSelector("h2"));
+
+
+
+        driver.findElement(By.cssSelector("#dialog-notifications-success"));
+        driver.findElement(By.cssSelector("#dialog-notifications-error"));
+
+
+
+        driver.findElement(By.cssSelector(".master-wrapper-content"));
+        driver.findElement(By.cssSelector(".header-logo"));
+        driver.findElement(By.cssSelector(".header-selectors-wrapper"));
+
+        driver.findElement(By.cssSelector("[for='pollanswers-1']"));
+        driver.findElement(By.cssSelector("[href='/register']"));
+
+        driver.findElement(By.cssSelector("[href*='addresses']"));
+
+        driver.findElement(By.cssSelector("[href^='/camera']"));
+
+        driver.findElement(By.cssSelector("[href$='photo']"));
+
+    }
+
+
     @AfterTest
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 
