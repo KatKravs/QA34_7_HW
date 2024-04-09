@@ -1,4 +1,4 @@
-package com.ait.qa34;
+package com.ait.test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

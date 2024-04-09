@@ -1,30 +1,19 @@
-package com.ait.qa34;
+package com.ait.fw;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 
-
-public class BasePage {
+public class BaseHelper  {
     WebDriver driver;
 
-    @BeforeMethod
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.get("https://demowebshop.tricentis.com");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-
+    public BaseHelper(WebDriver driver) {
+        this.driver = driver;
     }
-
     public boolean isElementPresents(By locator) {
         return driver.findElements(locator).size() > 0;
     }
@@ -45,14 +34,24 @@ public class BasePage {
         driver.findElement(locator).sendKeys(text);
     }
 
-    protected void click(By locator) {
+    public void click(By locator) {
         driver.findElement(locator).click();
     }
 
-
-    @AfterTest
-    public void tearDown() {
-        driver.quit();
+    public int sizeOfItemInShoppinCart() {
+        if (isElementPresents(By.cssSelector(".quantity"))) {
+            return driver.findElements(By.cssSelector(".quantity")).size();
+        }
+        return 0;
+    }
+    public void login() {
+        click(By.cssSelector("[href='/login']"));
+        // enter email
+        type(By.cssSelector("#Email"), "manuel1734usenko18@gmail.com");
+        // enter password
+        type(By.id("Password"), "Pochemu_to123");
+        // click on login button
+        click(By.cssSelector(".button-1.login-button"));
     }
 
 
