@@ -1,4 +1,4 @@
-package com.ait.models;
+package com.project.models;
 
 public class User {
     private String email;

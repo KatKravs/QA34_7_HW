@@ -1,5 +1,6 @@
-package com.ait.fw;
+package com.project.fw;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -33,7 +34,7 @@ public class AplicationManager {
         user = new UserHelper(driver);
     }
 
-    public UserHelper getUser() {
+    public UserHelper getUser(By by) {
         return user;
     }
     public void stop(){

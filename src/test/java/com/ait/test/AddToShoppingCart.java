@@ -1,6 +1,6 @@
 package com.ait.test;
 
-import com.ait.fw.BaseHelper;
+import com.project.fw.BaseHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;

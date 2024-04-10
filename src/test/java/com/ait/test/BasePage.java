@@ -1,6 +1,6 @@
 package com.ait.test;
 
-import com.ait.fw.AplicationManager;
+import com.project.fw.AplicationManager;
 import org.openqa.selenium.remote.Browser;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;

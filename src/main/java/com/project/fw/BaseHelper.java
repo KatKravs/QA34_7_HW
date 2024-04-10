@@ -1,4 +1,4 @@
-package com.ait.fw;
+package com.project.fw;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
